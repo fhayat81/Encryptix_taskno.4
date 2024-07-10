@@ -1,0 +1,178 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    overflow-x: hidden;
+}
+
+header{
+    background-color: #088395;
+    color: white;
+    padding: 5px 10px 10px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow-y: hidden;
+}
+
+header i{
+    visibility: hidden;
+    width: 0;
+    font-size: 30px;
+    margin: 0 20px 0 20px;
+    border: 2px solid white;
+    border-radius: 0.375rem;
+    padding: 3px 5px 3px 5px;
+}
+
+.nav{
+    margin: 10px;
+}
+
+.nav a{
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    margin-left: 30px;
+}
+
+.nav a:hover{
+    text-decoration: underline;
+}
+
+.dropdown{
+    visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    margin: 4px 10px 10px 10px;
+    right: 15px;
+    background-color: white;
+    padding: 1px;
+    border-radius: 0.375rem;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    
+}
+
+.dropdown:hover{
+    visibility: visible;
+    
+}
+
+.dropdown a{
+    text-decoration: none;
+    color: black;
+    margin: 3px 2px 3px 2px;
+    padding: 2px 15px 2px 15px;
+    border-radius: 0.375rem;
+}
+
+.dropdown a:hover{
+    background-color: #088395;
+    color: white;
+}
+
+header i:hover{
+    scale: 95%;
+    background-color: #077283;
+}
+
+header i:hover + .dropdown{
+    visibility: visible;
+}
+
+.section{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 20px 0 20px 0px;
+}
+
+.section img{
+    height: 300px;
+    margin: 10px;
+    border-radius: 0.375rem;
+}
+
+.text{
+    width: 600px;
+    margin: 0px 20px 0 20px;
+}
+
+.text p, li{
+    font-size: 18px;
+    margin-bottom: 7px;
+}
+
+.heading{
+    background-color: #088395;
+    padding: 10px 15px 10px 15px;
+    color: white;
+    font-size: 25px;
+    font-weight: 700;
+}
+
+footer{
+    background-color: #077283;
+    color: white;
+    padding: 5px 20px 5px 20px;
+}
+
+.quote{
+    margin: 5px 20px 5px 20px;
+    font-size: 20px;
+    text-align: center;
+    font-style: italic;
+    color: #555;
+}
+
+@media (max-width: 1200px){
+    header{
+        height: 60px;
+    }
+    .nav{
+        visibility: hidden;
+        width: 0;
+    }
+    header i{
+        visibility: visible;
+        width: auto;
+    }
+}
+
+@media (max-width:900px){
+    .section{
+        flex-direction: column;
+    }
+
+    .section-reverse{
+        flex-direction: column-reverse;
+    }
+}
+
+@media (max-width:640px){
+    .section img{
+        width: 300px;
+        overflow-x: hidden;
+    }
+    .text{
+        width: auto;
+    }
+
+    header h3{
+        font-size: 15px;
+    }
+
+    .quote{
+        font-size: 18px;
+    }
+
+    .text p, li{
+        font-size: 16px;
+    }
+
+    .heading{
+        font-size: 20px;
+    }
+}
+
